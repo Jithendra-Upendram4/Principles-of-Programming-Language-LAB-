@@ -1,0 +1,8 @@
+-- filterEven.hs
+filterEven :: [Int] -> [Int]
+filterEven = filter odd
+
+main :: IO ()
+main = do
+    let numbers = [1, 2, 3, 4, 5, 6]
+    print $ filterEven numbers
