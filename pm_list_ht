@@ -1,0 +1,10 @@
+firstElement :: Show a => [a] -> String
+firstElement [] = "Empty list"
+firstElement (x:_) = "First element is " ++ show x
+
+-- Main function for testing
+main :: IO ()
+main = do
+    print (firstElement [1, 2, 3])        -- Output: "First element is 1"
+    print (firstElement ([] :: [Int]))    -- Output: "Empty list"
+    print (firstElement ["a", "b", "c"]) -- Output: "First element is \"a\""
