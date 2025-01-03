@@ -1,0 +1,15 @@
+-- Define the custom data type
+data Color = Red | Green | Blue
+
+-- Define the describeColor function
+describeColor :: Color -> String
+describeColor Red   = "This is Red"
+describeColor Green = "This is Green"
+describeColor Blue  = "This is Blue"
+
+-- Main function for testing
+main :: IO ()
+main = do
+    print (describeColor Red)   -- Output: "This is Red"
+    print (describeColor Green) -- Output: "This is Green"
+    print (describeColor Blue)  -- Output: "This is Blue"
