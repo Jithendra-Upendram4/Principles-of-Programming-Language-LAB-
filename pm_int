@@ -5,5 +5,5 @@ isZero _ = "Not Zero"
 main :: IO ()
 main = do
     print (isZero 0)    
-    print (isZero 5)    
+    print (isZero 5)   
     print (isZero (-3)) 
