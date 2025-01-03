@@ -1,0 +1,11 @@
+-- Define the sumTuple function
+sumTuple :: (Int, Int) -> Int
+sumTuple (a, b) = a + b
+
+-- Main function for dynamic input
+main :: IO ()
+main = do
+    putStrLn "Enter two integers separated by a comma (e.g., 3,5):"
+    input <- getLine
+    let (a, b) = read ("(" ++ input ++ ")") :: (Int, Int)
+    putStrLn $ "The sum of the tuple is: " ++ show (sumTuple (a, b))
