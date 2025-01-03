@@ -1,0 +1,11 @@
+firstTwoElements :: [a] -> [a]
+firstTwoElements (x:y:_) = [x, y]  -- List has at least two elements
+firstTwoElements xs = xs           -- List has fewer than two elements
+
+-- Main function for testing
+main :: IO ()
+main = do
+    -- Explicitly specify the type of the lists being printed
+    print (firstTwoElements [1, 2, 3] :: [Int]) -- Output: [1, 2]
+    print (firstTwoElements [10] :: [Int])      -- Output: [10]
+    print (firstTwoElements [] :: [Int])        -- Output: []
