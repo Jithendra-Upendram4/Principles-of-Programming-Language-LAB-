@@ -1,0 +1,16 @@
+-- Function to calculate the length of the list using recursion
+listLength :: [a] -> Int
+listLength [] = 0            -- Base case: empty list has length 0
+listLength (_:xs) = 1 + listLength xs  -- Recursive case: 1 + length of the rest of the list
+
+-- Main function for dynamic input
+main :: IO ()
+main = do
+    -- Prompt user for input
+    putStrLn "Enter a list of integers (separated by spaces):"
+    input <- getLine  -- Read the input as a string
+    let intList = map read (words input) :: [Int]  -- Convert the input string to a list of integers
+
+    -- Use listLength function and print the result
+    let lengthOfList = listLength intList
+    putStrLn $ "The length of the list is: " ++ show lengthOfList
