@@ -1,0 +1,20 @@
+-- Function to describe the pair
+describePair :: (Int, Int) -> String
+describePair (0, 0) = "Origin"
+describePair (0, _) = "X-Axis"
+describePair (_, 0) = "Y-Axis"
+describePair _ = "Other"
+
+-- Main function for dynamic input
+main :: IO ()
+main = do
+    -- Prompt user for input
+    putStrLn "Enter the first integer (x):"
+    x <- readLn :: IO Int
+
+    putStrLn "Enter the second integer (y):"
+    y <- readLn :: IO Int
+
+    -- Use describePair function and print the result
+    let result = describePair (x, y)
+    putStrLn $ "The pair (" ++ show x ++ ", " ++ show y ++ ") is: " ++ result
